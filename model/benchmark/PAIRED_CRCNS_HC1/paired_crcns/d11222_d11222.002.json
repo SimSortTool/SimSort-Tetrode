@@ -1,0 +1,27 @@
+{
+    "geom": [
+        [
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            25.0
+        ],
+        [
+            0.0,
+            50.0
+        ],
+        [
+            0.0,
+            75.0
+        ]
+    ],
+    "params": {
+        "samplerate": 20000,
+        "scale_factor": 0.305176,
+        "spike_sign": -1
+    },
+    "raw": "sha1://125ac8f3fa880d6fa26e597a6a32a31d51fe4701?label=raw.mda",
+    "self_reference": "sha1://5b9bf472d9c5b152fcb46ebeb96f26089a15b8b9?label=PAIRED_CRCNS_HC1/paired_crcns/d11222_d11222.002.json"
+}

@@ -1,0 +1,27 @@
+{
+    "geom": [
+        [
+            43.0,
+            160.0
+        ],
+        [
+            11.0,
+            160.0
+        ],
+        [
+            57.0,
+            180.0
+        ],
+        [
+            27.0,
+            180.0
+        ]
+    ],
+    "params": {
+        "samplerate": 30000,
+        "scale_factor": 1,
+        "spike_sign": -1
+    },
+    "raw": "sha1://46fd34036e2f32c8e2a99306ea162822a612b2af?label=raw.mda",
+    "self_reference": "sha1://b72d93bf215a0d7f1b111d71b663dc2e69f0324b?label=HYBRID_JANELIA/hybrid_drift_tetrode/rec_4c_600s_12.json"
+}

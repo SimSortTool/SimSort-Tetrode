@@ -1,0 +1,27 @@
+{
+    "geom": [
+        [
+            43.0,
+            480.0
+        ],
+        [
+            11.0,
+            480.0
+        ],
+        [
+            57.0,
+            500.0
+        ],
+        [
+            27.0,
+            500.0
+        ]
+    ],
+    "params": {
+        "samplerate": 30000,
+        "scale_factor": 1,
+        "spike_sign": -1
+    },
+    "raw": "sha1://f59fe1e1f0ff60cb5ed6f838f0d1647ddc84b686?label=raw.mda",
+    "self_reference": "sha1://9ebe312474977f166c01cad63f4d98f25608d58c?label=HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_600s_32.json"
+}
