@@ -1,0 +1,9 @@
+description: customized tetrode
+dim: 2
+electrode_name: tetrode_custom
+pitch: 13
+shape: circle
+size: 6.5
+sortlist: null
+stagger: 0
+type: mea

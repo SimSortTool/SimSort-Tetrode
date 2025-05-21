@@ -1,0 +1,31 @@
+data_info:
+  bbp_data_path: []
+  crcns_data_path: ./benchmark/PAIRED_CRCNS_HC1/paired_crcns/d11222_d11222.001.json
+  hybrid_file_path: ./benchmark/HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_600s_32.json
+loo_data_info:
+  bbp_L1_path: ./datasets/6e5_dt0.1_n5-long-L1-sorting/datasets
+  bbp_L23_path: ./datasets/6e5_dt0.1_n5-long-L23-sorting/datasets
+  bbp_L4_path: ./datasets/6e5_dt0.1_n5-long-L4-sorting/datasets
+  bbp_L5_path: ./datasets/6e5_dt0.1_n5-long-L5-sorting/datasets
+  bbp_L6_path: ./datasets/6e5_dt0.1_n5-long-L6-sorting/datasets
+  bbp_allen_path: ./datasets/6e5_dt0.1_n5_allen-long-1-sorting/datasets
+  hybrid_drift_paths:
+  - ./benchmark/HYBRID_JANELIA/hybrid_drift_tetrode/rec_4c_1200s_11.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_drift_tetrode/rec_4c_1200s_21.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_drift_tetrode/rec_4c_1200s_31.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_drift_tetrode/rec_4c_600s_11.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_drift_tetrode/rec_4c_600s_12.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_drift_tetrode/rec_4c_600s_21.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_drift_tetrode/rec_4c_600s_22.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_drift_tetrode/rec_4c_600s_31.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_drift_tetrode/rec_4c_600s_32.json
+  hybrid_static_paths:
+  - ./benchmark/HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_1200s_11.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_1200s_21.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_1200s_31.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_600s_11.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_600s_12.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_600s_21.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_600s_22.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_600s_31.json
+  - ./benchmark/HYBRID_JANELIA/hybrid_static_tetrode/rec_4c_600s_32.json

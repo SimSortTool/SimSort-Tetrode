@@ -1,0 +1,7 @@
+LFPy==2.3
+LFPykit==0.5.1
+MEArec==1.9.1
+MEAutility==1.5.1
+NEURON==8.2.4
+pytz==2022.7
+
