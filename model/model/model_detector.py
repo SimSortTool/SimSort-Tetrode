@@ -15,7 +15,9 @@ from data_factory.data_loader import LFPDataset_test
 from utils.score import calculate_n_match, calculate_metrics
 from utils.detect import merge_predicted_labels, extract_snippets, detect_spikes
 
-class SpikeDetector:   
+
+class SpikeDetector:
+
     def __init__(
         self,
         root_path: str = '/',
