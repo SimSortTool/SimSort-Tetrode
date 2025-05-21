@@ -7,7 +7,7 @@ Paper
 ·
 <a href="#">Code</a>
 ·
-<a href="https://simsortool.github.io/">Webpage</a>
+<a href="https://simsorttool.github.io/">Webpage</a>
 ·
 </p>
 
