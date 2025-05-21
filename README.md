@@ -14,10 +14,11 @@ Paper
 This repository contains the PyTorch implementation of "*SimSort: A Data-Driven Framework for Spike Sorting by Large-Scale Electrophysiology Simulation*".
 
 ## Overview
-SimSort is a data-driven spike sorting framework. It provides:
-✨ A large-scale electrophysiology simulator for generating biologically realistic extracellular data
-✨ Pre-trained models for spike detection and identification
-✨ Evaluation on public benchmark datasets
+SimSort is a data-driven spike sorting framework. It provides:  
+
+✨ A large-scale electrophysiology simulator for generating biologically realistic extracellular data<br>
+✨ Pre-trained models for spike detection and identification<br>
+✨ Evaluation on public benchmark datasets<br>
 ✨ A tool for custom spike sorting on tetrode data, compatible with SpikeInterface
 
 ## 🏃Quick Start
