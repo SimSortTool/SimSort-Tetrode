@@ -60,7 +60,7 @@ class Allen_population_simulator:
             cell = self.neuron_model.run()
 
         self.cell_pos = random_cell_position(self.cell_number, Seed=seed, **self.CellParameters)
-        #cell.set_pos(x=cell_pos[0], y=cell_pos[1], z=cell_pos[2])
+        cell.set_pos(x=self.cell_pos[0], y=self.cell_pos[1], z=self.cell_pos[2])
         cell.set_rotation(x=self.CellParameters['rotation'][0], y=self.CellParameters['rotation'][1])
     
         rheobase_current = get_rheobase_current(cell, min_current=0.05, 
