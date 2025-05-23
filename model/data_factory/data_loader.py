@@ -293,6 +293,7 @@ class WaveClusLoader:
                  sampling_frequency: int = 24000, 
                  mounted_blob_dir: str = './', 
                  flag: str = 'test',
+                 label_range: list = [-10, 30],
                  **kwargs):
         if file_path is not None:
             self.file_path = os.path.join(mounted_blob_dir, file_path)
@@ -315,7 +316,8 @@ class WaveClusLoader:
         self.unit_spike_trains = None
         self.standardize_data = None
         self.spatial_whitening = None
-
+        self.label_range = label_range
+        
     @staticmethod
     def _generate_seed(file_path):
         """Generate a unique seed based on the file path."""
@@ -333,7 +335,7 @@ class WaveClusLoader:
         raw_data = np.expand_dims(raw_data, axis=0).T * 10
         raw_data = - raw_data  # Invert the data
 
-        freq_min, freq_max = 300, 6000
+        freq_min, freq_max = 300, 10000
         filtered_data = bandpass_filter(raw_data, freq_min, freq_max, self.sampling_frequency)
 
         # Expand to 4 channels with transformations
@@ -350,8 +352,8 @@ class WaveClusLoader:
         # Generate labels
         labels = np.zeros(data.shape[0])
         for spike_time in spike_times:
-            start = max(0, spike_time - 20)
-            end = min(data.shape[0], spike_time + 20)
+            start = max(0, spike_time - self.label_range[0])
+            end = min(data.shape[0], spike_time + self.label_range[1])
             labels[start:end] = 1
 
         # Generate unit spike trains
@@ -383,7 +385,7 @@ class WaveClusLoader:
             self.data, self.labels, self.unit_spike_trains = self.load_data()
         return self.data, self.labels, self.unit_spike_trains
 
-    def get_waveforms_and_labels(self, cut: list = [20, 40], waveform_num: int = 500):
+    def get_waveforms_and_labels(self, cut: list = [20, 40], waveform_num: int = 100):
         if self.spatial_whitening is None:
             if self.flag == 'train':
                 self.standardize_data = True
@@ -407,6 +409,7 @@ class WaveClusLoader:
         sorted_waveform = np.stack(waveforms)
         sorted_label = np.concatenate([[unit_id] * len(waveforms[:waveform_num]) for unit_id in np.unique(self.unit_spike_trains[:, 1])])
         return sorted_waveform, sorted_label
+
 
 class BbpRecordingLoader:
     """
