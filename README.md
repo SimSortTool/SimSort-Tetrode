@@ -38,6 +38,39 @@ pip install kachery-cloud
 kachery-cloud-init
 ```
 
+### Download Pre-trained Models
+Download the pre-trained models from our [GitHub Release](https://github.com/SimSortTool/SimSort-Tetrode/releases/tag/v1.0.0) and place them in the correct directory structure.
+
+```bash
+# Create directory for pre-trained models
+mkdir -p model/simsort_pretrained
+
+# Download and extract pre-trained models
+cd model/simsort_pretrained
+wget https://github.com/SimSortTool/SimSort-Tetrode/releases/download/v1.0.0/extractor_bbp_L1-L5-8192.zip
+wget https://github.com/SimSortTool/SimSort-Tetrode/releases/download/v1.0.0/detector_bbp_L1-L5-8192.zip
+unzip extractor_bbp_L1-L5-8192.zip
+unzip detector_bbp_L1-L5-8192.zip
+cd ../..
+```
+
+> **Important**: After extraction, ensure that the models are in the correct directory structure:
+> ```
+> model/simsort_pretrained/
+> ├── detector_bbp_L1-L5-8192/
+> │   ├── detection_config.yaml
+> │   ├── detection_aug_config.yaml
+> │   └── saved_models/
+> │       ├── checkpoint.pth
+> │       └── args.yaml
+> └── extractor_bbp_L1-L5-8192/
+>     ├── config.yaml
+>     ├── aug_config.yaml
+>     └── saved_models/
+>         ├── checkpoint.pth
+>         └── args.yaml
+> ```
+
 ### Using Pre-trained Models
 ```bash
 # Run spike sorting with pre-trained models
