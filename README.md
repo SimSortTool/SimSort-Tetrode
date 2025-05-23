@@ -19,7 +19,7 @@ SimSort is a data-driven spike sorting framework. It provides:
 ✨ A large-scale electrophysiology simulator for generating biologically realistic extracellular data<br>
 ✨ Pre-trained models for spike detection and identification<br>
 ✨ Evaluation on public benchmark datasets<br>
-✨ A tool for custom spike sorting on tetrode data, compatible with SpikeInterface
+✨ A tool for custom spike sorting on tetrode data
 
 ## 🏃Quick Start
 
