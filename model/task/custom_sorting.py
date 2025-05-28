@@ -380,15 +380,15 @@ class SortingTask:
             raise ValueError('Invalid dimensionality reduction method')
         
         plt.show()
+        return fig
         
     def run(self):
         self.get_data()
         self.peak_positions, self.snippets = self.detect_spike(self.test_data)
         self.labels_list, self.reduced_features_list = self.cluster()
-        for i in range(len(self.labels_list)):
-            self.visualize(self.labels_list[i], self.reduced_features_list[i], self.snippets[i])
+        self.figs = [self.visualize(self.labels_list[i], self.reduced_features_list[i], self.snippets[i]) for i in range(len(self.labels_list))]
 
-    def get_results(self, save=False, output_dir='./simsort_results', overwrite=False):
+    def get_results(self, save=False, output_dir='./simsort_results', overwrite=False, save_fig=True):
         if not overwrite and os.path.exists(output_dir):
             timestamp = time.strftime("%Y%m%d-%H%M%S")
             output_dir = f"{output_dir}_{timestamp}"
@@ -411,6 +411,10 @@ class SortingTask:
                     print(f"Labels file already exists: {labels_path}. Skipping.")
                 else:
                     pd.DataFrame({'Cluster': num_label}).to_csv(labels_path, index=False)
+
+                if save_fig:
+                    fig = self.figs[seg_idx]
+                    fig.savefig(os.path.join(segment_dir, 'visualization.png'), dpi=300, bbox_inches='tight')
 
             self.neurons_waveforms = []
             self.neurons_timestamps = []
@@ -457,11 +461,11 @@ class SortingTask:
 
                 print(f"Results saved to: {output_dir}")
 
-    def save_results(self, output_dir='./simsort_results', overwrite=False):
+    def save_results(self, output_dir='./simsort_results', overwrite=False, save_fig=True):
         if not overwrite and os.path.exists(output_dir):
             timestamp = time.strftime("%Y%m%d-%H%M%S")
             output_dir = f"{output_dir}_{timestamp}"
             print(f"Output directory exists. Saving to: {output_dir}")
 
-        self.get_results(save=True, output_dir=output_dir, overwrite=overwrite)
+        self.get_results(save=True, output_dir=output_dir, overwrite=overwrite, save_fig=save_fig)
             
