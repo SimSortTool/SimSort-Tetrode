@@ -71,12 +71,11 @@ cd ../..
 >         └── args.yaml
 > ```
 
-### Using Pre-trained Models
+### Using Pre-trained Models for Benchmarking
 ```bash
 # Run spike sorting with pre-trained models
 bash scripts/run_sorting.sh
 ```
-
 ### Training Models
 ```bash
 # Train detection model
@@ -93,9 +92,8 @@ bash scripts/run_sorting_with_si.sh --si_sorter kilosort
 ```
 
 ## Custom Data
-
-For applying SimSort to your own recordings, see `model/SimSort_Tool_Demo.ipynb`.
-
+If you want to apply SimSort to your own neural recordings, please check out the example notebook at `model/SimSort_Tool_Demo.ipynb`
+For a step-by-step guide, please visit 👉 [SimSortTool](https://simsorttool.github.io/)
 
 
 <!-- ## Part 1: Simulator - Generate Custom Datasets
