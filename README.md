@@ -37,6 +37,7 @@ pip install -r model/requirements.txt
 pip install kachery-cloud
 kachery-cloud-init
 ```
+> ‼️ Additionally, you need to install PyTorch following the [official setup guide](https://pytorch.org/) depending on your system configuration.
 
 ### Download Pre-trained Models
 Download the pre-trained models from our [GitHub Release](https://github.com/SimSortTool/SimSort-Tetrode/releases/tag/v1.0.0) and place them in the correct directory structure.
